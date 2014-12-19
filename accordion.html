@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Accordion</title>
+    <link href="http://code.jquery.com/ui/1.10.3/themes/ui-darkness/jquery-ui.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <script>
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+
+        $(function () {
+            $('#accordion').accordion(
+                    {
+                        collapsible: true,
+                        icons: icons,
+                        heightStyle: "Content", //auto
+                        active: 2,
+                        /*
+                        activate: function (event, ui) {
+                          alert(ui.newHeader.context.draggable);
+                        }
+                        */
+                        animate: "easeOutBack"
+                    }
+            );
+
+        });
+    </script>
+</head>
+<body>
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                section 1 paragraph
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                section 2 paragraph
+            </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+            <p>
+                section 3 paragraph
+            </p>
+            <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+            </ul>
+        </div>
+        <h3> Section 4</h3>
+        <div>
+            <p>
+                section 4 paragraph
+            </p>
+        </div>
+    </div>
+</body>
+</html>
